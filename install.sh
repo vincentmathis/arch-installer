@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -S keepassxc nextcloud-client
+sudo pacman --noconfirm -S keepassxc nextcloud-client
 
 cd "$HOME"
 
