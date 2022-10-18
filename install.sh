@@ -1,18 +1,18 @@
 #!/bin/sh
 
-sudo pacman --noconfirm -S keepassxc nextcloud-client
+sudo pacman -S --needed base-devel
 
 cd "$HOME"
 
 ### install yay AUR helper
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg --noconfirm -si
 cd ..
-rm -rf yay
+rm -rf paru
 
 ### install yadm
-yay -S --answerclean y --answerdiff n yadm-git
+sudo pacman -S --noconfirm yadm
 
 ### clone dotfiles
 yadm clone --bootstrap https://github.com/vincentmathis/dotfiles.git
