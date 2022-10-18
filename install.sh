@@ -16,7 +16,6 @@ sudo pacman -S --noconfirm yadm
 
 ### clone dotfiles
 yadm clone --bootstrap https://github.com/vincentmathis/dotfiles.git
-yadm drop stash
 yadm decrypt
 
 # https://github.com/MatMoul/archfi
