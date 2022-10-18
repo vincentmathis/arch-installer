@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -S --needed base-devel
+sudo pacman -S --noconfirm --needed base-devel
 
 cd "$HOME"
 
@@ -17,6 +17,9 @@ sudo pacman -S --noconfirm yadm
 ### clone dotfiles
 yadm clone --bootstrap https://github.com/vincentmathis/dotfiles.git
 yadm decrypt
+
+### change yadm to ssh after dedrypting ssh keys
+yadm remote set-url origin git@github.com:vincentmathis/dotfiles.git
 
 # https://github.com/MatMoul/archfi
 # https://github.com/MatMoul/archdi
